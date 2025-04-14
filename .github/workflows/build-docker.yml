@@ -23,4 +23,4 @@ jobs:
       - name: Build Docker image
         run: docker build . --file build/docker/Dockerfile --build-arg EMULATOR=${{ matrix.emulator }} --tag ghcr.io/${GITHUB_REPOSITORY_OWNER}/its-${{ matrix.emulator }}:${{ github.sha }}
       - name: Push Docker image
-        run: docker push ghcr.io/${GITHUB_REPOSITORY_OWNER}/its-${{ matrix.emulator }}:${{ github.sha }}
+        run: docker push ghcr.io/${GITHUB_REPOSITORY_OWNER@L}/its-${{ matrix.emulator }}:${{ github.sha }}
